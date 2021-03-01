@@ -1,16 +1,15 @@
-version: '3'
-networks:
-  default:
-    name: host
+version: '3.4'
 services:
   nextjs:
     build:
       context: .
+      network: host
     # networks:
     # - nextts-rest-redux-panel-nginx_host
   nginx:
     build:
       context: ./nginx
+      network: host
     # networks:
     # - nextts-rest-redux-panel-nginx_host
     ports:
