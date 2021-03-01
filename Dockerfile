@@ -54,3 +54,4 @@ COPY --from=builder /app/out /usr/share/nginx/html
 EXPOSE 3000 80
 
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
+# 
