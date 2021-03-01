@@ -16,7 +16,7 @@
 
 
 # stage1 as builder
-FROM node:15.10-alpine3.10 as builder
+FROM node:15.10.0 as builder
 
 LABEL Author="mazdak nazemi"
 
@@ -27,7 +27,7 @@ COPY package.json .
 
 # Install the dependencies and make the folder
 
-RUN npm i --legacy-peer-deps
+RUN npm install --legacy-peer-deps
 
 COPY . .
 
