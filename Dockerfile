@@ -27,7 +27,7 @@ COPY package.json .
 
 # Install the dependencies and make the folder
 
-RUN npm install 
+RUN npm i --legacy-peer-deps
 
 COPY . .
 
