@@ -13,7 +13,7 @@ services:
 # networks:
 #   host:
 #     driver: host
-networks:
-  default:
-    external:
-      name: host
+# networks:
+#   default:
+#     external:
+#       name: host
