@@ -51,6 +51,12 @@ export default class MyDocument extends Document<DocumentProps> {
             />
             {/* <link rel="stylesheet" href="/css/uikit.min.css" /> */}
             {/* <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> */}
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css"
+              integrity="sha512-wl80ucxCRpLkfaCnbM88y4AxnutbGk327762eM9E/rRTvY/ZGAHWMZrYUq66VQBYMIYDFpDdJAOGSLyIPHZ2IQ=="
+              crossOrigin="anonymous"
+            />
           </head>
         </Head>
         <body>
