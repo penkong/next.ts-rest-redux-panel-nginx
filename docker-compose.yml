@@ -1,23 +1,14 @@
 version: '3.4'
 services:
   nextjs:
+    restart: always
     build:
       context: .
       network: host
-    # networks:
-    # - nextts-rest-redux-panel-nginx_host
   nginx:
+    restart: always
     build:
       context: ./nginx
       network: host
-    # networks:
-    # - nextts-rest-redux-panel-nginx_host
     ports:
       - 80:80
-# networks:
-#   host:
-#     driver: host
-# networks:
-#   default:
-#     external:
-#       name: host
