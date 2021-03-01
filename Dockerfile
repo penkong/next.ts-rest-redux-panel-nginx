@@ -16,7 +16,7 @@
 
 
 # stage1 as builder
-FROM node:alpine as builder
+FROM node:15.10-alpine3.10 as builder
 
 LABEL Author="mazdak nazemi"
 
