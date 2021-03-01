@@ -16,4 +16,4 @@ services:
 networks:
   default:
     external:
-      name: nextts-rest-redux-panel-nginx_host
+      name: host
