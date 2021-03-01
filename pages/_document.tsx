@@ -67,8 +67,8 @@ export default class MyDocument extends Document<DocumentProps> {
 
 // ctx.renderPage() is for usage with css-in-js libraries that need to
 // wrap the application to properly work with server-side rendering.
-// MyDocument.getInitialProps = async (ctx: DocumentContext) => {
-//   // console.log(ctx)
-//   const initialProps = await Document.getInitialProps(ctx)
-//   return { ...initialProps }
-// }
+MyDocument.getInitialProps = async (ctx: DocumentContext) => {
+  // console.log(ctx)
+  const initialProps = await Document.getInitialProps(ctx)
+  return { ...initialProps }
+}

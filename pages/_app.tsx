@@ -27,22 +27,22 @@ function MyApp({ Component, pageProps, router, currentUser }: IProps) {
 // ------------------------------------------------------
 // prefer use AppContext rather than AppContextType
 // AppContext is with advanced Router
-// MyApp.getInitialProps = async (
-// 	appContext: AppContext
-// ): Promise<AppInitialProps & IPassingProps> => {
-// 	// how add current user to header
-// 	// const { data } = await buildClient(appContext.ctx).get(
-// 	//   '/api/users/currentuser'
-// 	// )
-// 	const data = { currentUser: null }
-// 	let pageProps = {}
-// 	// console.log(appContext.router.isSsr)
-// 	if (appContext.Component.getInitialProps) {
-// 		// this call on each page if we want with ctx
-// 		pageProps = await appContext.Component.getInitialProps(appContext.ctx)
-// 	}
+MyApp.getInitialProps = async (
+  appContext: AppContext
+): Promise<AppInitialProps & IPassingProps> => {
+  // how add current user to header
+  // const { data } = await buildClient(appContext.ctx).get(
+  //   '/api/users/currentuser'
+  // )
+  const data = { currentUser: null }
+  let pageProps = {}
+  // console.log(appContext.router.isSsr)
+  if (appContext.Component.getInitialProps) {
+    // this call on each page if we want with ctx
+    pageProps = await appContext.Component.getInitialProps(appContext.ctx)
+  }
 
-// 	// ...data == currentUser: data.currentUser
-// 	return { pageProps, ...data }
-// }
+  // ...data == currentUser: data.currentUser
+  return { pageProps, ...data }
+}
 export default MyApp
