@@ -10,3 +10,10 @@ services:
       - host
     ports:
       - 80:80
+# networks:
+#   host:
+#     driver: host
+networks:
+  default:
+    external:
+      name: host
